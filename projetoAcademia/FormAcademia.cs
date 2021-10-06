@@ -20,10 +20,8 @@ namespace projetoAcademia
 
         private void FormAcademia_Load(object sender, EventArgs e)
         {
+            CriarBanco();
             BoaForma = new Academia();
-            BoaForma.Alunos.Add(new Aluno(1, "JOÃO", 23, 68, 1.72));
-            BoaForma.Alunos.Add(new Aluno(2, "MARIA", 25, 78, 1.62));
-            BoaForma.Alunos.Add(new Aluno(3, "JOSÉ", 27, 72, 1.80));
             bs.DataSource = BoaForma.Alunos;
             dgvAlunos.DataSource = bs;
             dgvAlunos.Columns["Altura"].DefaultCellStyle.Format = "N2";
@@ -36,6 +34,13 @@ namespace projetoAcademia
             }
             dgvAlunos.RowHeadersDefaultCellStyle.ForeColor = Color.FromArgb(48, 84, 150);
             dgvAlunos.AutoResizeColumns();
+        }
+
+        private void CriarBanco()
+        {
+            Conexao servidor = new Conexao();
+            string caminho = Environment.CurrentDirectory + "\\academia.sqlite";
+            servidor.CriarBanco(caminho);
         }
     }
 }
