@@ -41,7 +41,7 @@ namespace projetoAcademia
                 banco.ExecuteNonQuery();
             }
         }
-        public void consulta(Aluno reg)
+        public void consulte(Aluno reg)
         {
             Conexao servidor = new Conexao();
             using (var banco = new SQLiteCommand(servidor.Open()))
