@@ -21,7 +21,9 @@ namespace projetoAcademia
         private void FormAcademia_Load(object sender, EventArgs e)
         {
             CriarBanco();
+            AlunoDB tabela = new AlunoDB();
             BoaForma = new Academia();
+            BoaForma.Alunos = tabela.pesquisar();
             bs.DataSource = BoaForma.Alunos;
             dgvAlunos.DataSource = bs;
             dgvAlunos.Columns["Altura"].DefaultCellStyle.Format = "N2";
@@ -41,6 +43,20 @@ namespace projetoAcademia
             Conexao servidor = new Conexao();
             string caminho = Environment.CurrentDirectory + "\\academia.sqlite";
             servidor.CriarBanco(caminho);
+        }
+
+        private void btnAdicionarAluno_Click(object sender, EventArgs e)
+        {
+            FormCadastroAluno ficha = new FormCadastroAluno();
+            ficha.Registro = null;
+            ficha.ShowDialog();
+
+            if (ficha.Registro != null)
+            {
+                BoaForma.Alunos.Add(ficha.Registro);
+                bs.ResetBindings(false);
+                bs.MoveLast();
+            }
         }
     }
 }

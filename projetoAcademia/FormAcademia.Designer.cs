@@ -84,7 +84,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkRed;
             this.dgvAlunos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAlunos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Silver;
-            this.dgvAlunos.Size = new System.Drawing.Size(1264, 625);
+            this.dgvAlunos.Size = new System.Drawing.Size(1264, 593);
             this.dgvAlunos.TabIndex = 0;
             // 
             // bindingNavigatorMoveFirstItem
@@ -93,7 +93,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 51);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 83);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
             // 
             // bindingNavigatorMovePreviousItem
@@ -102,13 +102,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 51);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 83);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 54);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 86);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -122,14 +122,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 51);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 83);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 54);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 86);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -137,7 +137,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 51);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 83);
             this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
             // 
             // bindingNavigatorMoveLastItem
@@ -146,13 +146,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 51);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 83);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 54);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 86);
             // 
             // bn
             // 
@@ -172,14 +172,14 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnAdicionarAluno});
-            this.bn.Location = new System.Drawing.Point(0, 627);
+            this.bn.Location = new System.Drawing.Point(0, 595);
             this.bn.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bn.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bn.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bn.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bn.Name = "bn";
             this.bn.PositionItem = this.bindingNavigatorPositionItem;
-            this.bn.Size = new System.Drawing.Size(1264, 54);
+            this.bn.Size = new System.Drawing.Size(1264, 86);
             this.bn.TabIndex = 1;
             this.bn.Text = "bindingNavigator1";
             // 
@@ -189,9 +189,10 @@
             this.btnAdicionarAluno.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAdicionarAluno.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdicionarAluno.Name = "btnAdicionarAluno";
-            this.btnAdicionarAluno.Size = new System.Drawing.Size(65, 51);
+            this.btnAdicionarAluno.Size = new System.Drawing.Size(68, 83);
             this.btnAdicionarAluno.Text = "Matricular";
             this.btnAdicionarAluno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdicionarAluno.Click += new System.EventHandler(this.btnAdicionarAluno_Click);
             // 
             // FormAcademia
             // 

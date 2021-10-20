@@ -45,32 +45,32 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGravar
             // 
-            this.btnGravar.Location = new System.Drawing.Point(3, 3);
+            this.btnGravar.Location = new System.Drawing.Point(6, 247);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(75, 23);
-            this.btnGravar.TabIndex = 1;
+            this.btnGravar.TabIndex = 6;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(84, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(111, 247);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtNumeroMatricula
             // 
@@ -120,14 +120,14 @@
             this.txtPesoAluno.Location = new System.Drawing.Point(229, 3);
             this.txtPesoAluno.Name = "txtPesoAluno";
             this.txtPesoAluno.Size = new System.Drawing.Size(39, 20);
-            this.txtPesoAluno.TabIndex = 1;
+            this.txtPesoAluno.TabIndex = 3;
             // 
             // txtNomeAluno
             // 
             this.txtNomeAluno.Location = new System.Drawing.Point(109, 3);
             this.txtNomeAluno.Name = "txtNomeAluno";
-            this.txtNomeAluno.Size = new System.Drawing.Size(195, 20);
-            this.txtNomeAluno.TabIndex = 1;
+            this.txtNomeAluno.Size = new System.Drawing.Size(316, 20);
+            this.txtNomeAluno.TabIndex = 2;
             // 
             // label4
             // 
@@ -143,14 +143,14 @@
             this.txtIdadeAluno.Location = new System.Drawing.Point(229, 3);
             this.txtIdadeAluno.Name = "txtIdadeAluno";
             this.txtIdadeAluno.Size = new System.Drawing.Size(39, 20);
-            this.txtIdadeAluno.TabIndex = 1;
+            this.txtIdadeAluno.TabIndex = 4;
             // 
             // txtAlturaAluno
             // 
             this.txtAlturaAluno.Location = new System.Drawing.Point(229, 3);
             this.txtAlturaAluno.Name = "txtAlturaAluno";
             this.txtAlturaAluno.Size = new System.Drawing.Size(39, 20);
-            this.txtAlturaAluno.TabIndex = 1;
+            this.txtAlturaAluno.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
@@ -203,22 +203,13 @@
             this.flowLayoutPanel5.Size = new System.Drawing.Size(437, 39);
             this.flowLayoutPanel5.TabIndex = 2;
             // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.Controls.Add(this.btnGravar);
-            this.flowLayoutPanel6.Controls.Add(this.btnCancelar);
-            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 222);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(437, 100);
-            this.flowLayoutPanel6.TabIndex = 3;
-            // 
             // FormCadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 322);
-            this.Controls.Add(this.flowLayoutPanel6);
+            this.ClientSize = new System.Drawing.Size(437, 363);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.flowLayoutPanel5);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -238,7 +229,6 @@
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -262,6 +252,5 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
     }
 }
