@@ -58,5 +58,29 @@ namespace projetoAcademia
                 bs.MoveLast();
             }
         }
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            FormCadastroAluno ficha = new FormCadastroAluno();
+            ficha.Registro = (Aluno) bs.Current;
+            ficha.ShowDialog();
+            if(ficha.Registro != null) {
+                BoaForma.Editar(ficha.Registro);
+            }
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            Aluno Registro = (Aluno) bs.Current;
+            DialogResult op;
+
+            op = MessageBox.Show("Deseja excluir? "+ Registro.Nome, "Alerta", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if(op == DialogResult.Yes) {
+                AlunoDB tabela = new AlunoDB();
+                tabela.excluir(Registro);
+                bs.RemoveCurrent();
+            }
+        }
     }
 }

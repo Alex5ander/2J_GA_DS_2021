@@ -18,5 +18,15 @@ namespace projetoAcademia
         {
             return Alunos.Count();
         }
+
+        internal void Editar(Aluno aluno)
+        {
+            Aluno velho = Alunos.First(i => i.Codigo == aluno.Codigo);
+          
+            velho.Nome = aluno.Nome;
+            velho.Peso = aluno.Peso;
+            velho.Idade = aluno.Idade;
+            velho.Altura = aluno.Altura;
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace projetoAcademia
             using (var banco = new SQLiteCommand(servidor.Open()))
             {
                 string SQL = string.Format("UPDATE ALUNO SET NOME = '{1}', IDADE = {2}, PESO = {3}, ALTURA = {4} WHERE CODIGO = {0}",
-                reg.Codigo, reg.Nome, reg.Idade, reg.Peso, reg.Altura.ToString().Replace(',', '.'));
+                reg.Codigo, reg.Nome, reg.Idade, reg.Peso, reg.Altura);
                 banco.CommandText = SQL;
                 banco.ExecuteNonQuery();
             }

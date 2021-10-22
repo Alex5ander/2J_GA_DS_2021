@@ -35,7 +35,7 @@ namespace projetoAcademia
                 banco.CommandText = "CREATE TABLE IF NOT EXISTS ALUNO (" +
                 "CODIGO INT PRIMARY KEY,"+
                 "NOME VARCHAR(45),"+
-                "IDATE INT, PESO DOUBLE,"+
+                "IDADE INT, PESO DOUBLE,"+
                 "ALTURA DOUBLE)";
                 banco.ExecuteNonQuery();
             }

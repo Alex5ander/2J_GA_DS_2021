@@ -20,6 +20,7 @@ namespace projetoAcademia
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
+            if (Validar() == false) return;
             if(Registro == null) novo();
             else editar();
             this.Dispose();
@@ -45,6 +46,7 @@ namespace projetoAcademia
             AlunoDB tabela = new AlunoDB();
             Registro = new Aluno()
             {
+                Codigo = Registro.Codigo,
                 Nome = txtNomeAluno.Text.ToUpper(),
                 Idade = Int16.Parse(txtIdadeAluno.Text),
                 Peso = Convert.ToDouble(txtPesoAluno.Text),
@@ -54,10 +56,33 @@ namespace projetoAcademia
             MessageBox.Show("Mátricula alterada");
         }
 
+        private bool Validar()
+        {
+            if(txtNumeroMatricula.Text.Trim().Equals("")) {
+                ep.SetError(txtNumeroMatricula, "Matricula inválida");
+                return false; 
+            }
+            ep.SetError(txtNumeroMatricula, "");
+            return true;
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Registro = null;
             this.Dispose();
+        }
+
+        private void FormCadastroAluno_Load(object sender, EventArgs e)
+        {
+            if (Registro != null)
+            {
+                txtNumeroMatricula.Text = Registro.Codigo.ToString();
+                txtNomeAluno.Text = Registro.Nome.ToUpper();
+                txtIdadeAluno.Text = Registro.Idade.ToString();
+                txtPesoAluno.Text = Registro.Peso.ToString();
+                txtAlturaAluno.Text = Registro.Altura.ToString();
+                txtNumeroMatricula.Enabled = false;
+            }
         }
     }
 }
