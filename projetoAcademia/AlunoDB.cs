@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.ComponentModel;
 
 namespace projetoAcademia
 {
@@ -41,7 +42,7 @@ namespace projetoAcademia
                 banco.ExecuteNonQuery();
             }
         }
-        public System.ComponentModel.BindingList<Aluno> pesquisar()
+        public BindingList<Aluno> pegarlista()
         {
             Conexao servidor = new Conexao();
             using (var banco = new SQLiteCommand(servidor.Open()))
@@ -49,7 +50,7 @@ namespace projetoAcademia
                 string SQL = string.Format("SELECT * FROM ALUNO");
                 banco.CommandText = SQL;
                 SQLiteDataReader dr = banco.ExecuteReader();
-                System.ComponentModel.BindingList<Aluno> lista = new System.ComponentModel.BindingList<Aluno>();
+                BindingList<Aluno> lista = new System.ComponentModel.BindingList<Aluno>();
                 while (dr.Read())
                 {
                     Aluno reg = new Aluno()
@@ -62,6 +63,52 @@ namespace projetoAcademia
                     };
                     lista.Add(reg);
                 }
+
+                dr.Close();
+                return lista;
+            }
+        }
+
+        public BindingList<Aluno> procurar(string texto, string tipo)
+        {
+            Conexao servidor = new Conexao();
+            using (var banco = new SQLiteCommand(servidor.Open()))
+            {
+
+                string SQL = "";
+
+                
+                if (tipo == "I")
+                {
+                    SQL = string.Format("SELECT * FROM ALUNO WHERE NOME LIKE '{0}%'", texto);
+                }
+                else if (tipo == "M")
+                {
+                    SQL = string.Format("SELECT * FROM ALUNO WHERE NOME LIKE '%{0}%' ", texto);
+                }
+                else if(tipo == "F")
+                {
+                    SQL = string.Format("SELECT * FROM ALUNO WHERE NOME LIKE '%{0}' ", texto);
+                }
+
+                banco.CommandText = SQL;
+
+                SQLiteDataReader dr = banco.ExecuteReader();
+                BindingList<Aluno> lista = new System.ComponentModel.BindingList<Aluno>();
+                while (dr.Read())
+                {
+                    Aluno reg = new Aluno()
+                    {
+                        Codigo = dr.GetInt64(0),
+                        Nome = dr.GetString(1),
+                        Idade = dr.GetInt16(2),
+                        Peso = dr.GetDouble(3),
+                        Altura = dr.GetDouble(4)
+                    };
+                    lista.Add(reg);
+                }
+
+                dr.Close();
                 return lista;
             }
         }

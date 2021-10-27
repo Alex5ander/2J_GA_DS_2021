@@ -48,6 +48,7 @@
             this.btnAdicionarAluno = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnRemover = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
             this.bn.SuspendLayout();
@@ -71,10 +72,11 @@
             this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlunos.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.dgvAlunos, "dgvAlunos");
+            this.dgvAlunos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAlunos.Name = "dgvAlunos";
             this.dgvAlunos.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -153,7 +155,8 @@
             this.bindingNavigatorSeparator2,
             this.btnAdicionarAluno,
             this.btnEditar,
-            this.btnRemover});
+            this.btnRemover,
+            this.toolStripButton1});
             this.bn.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bn.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bn.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -178,6 +181,12 @@
             resources.ApplyResources(this.btnRemover, "btnRemover");
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // toolStripButton1
+            // 
+            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // FormAcademia
             // 
@@ -218,6 +227,7 @@
         private System.Windows.Forms.ToolStripButton btnAdicionarAluno;
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnRemover;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

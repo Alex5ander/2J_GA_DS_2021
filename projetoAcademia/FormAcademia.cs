@@ -23,18 +23,9 @@ namespace projetoAcademia
             CriarBanco();
             AlunoDB tabela = new AlunoDB();
             BoaForma = new Academia();
-            BoaForma.Alunos = tabela.pesquisar();
+            BoaForma.Alunos = tabela.pegarlista();
             bs.DataSource = BoaForma.Alunos;
             dgvAlunos.DataSource = bs;
-            dgvAlunos.Columns["Altura"].DefaultCellStyle.Format = "N2";
-            dgvAlunos.GridColor = Color.FromArgb(168, 202, 232);
-
-            for (int i = 0; i < dgvAlunos.Rows.Count; i++)
-            {
-                DataGridViewRow row = dgvAlunos.Rows[i];
-                row.DefaultCellStyle.BackColor = i % 2 == 0 ? Color.FromArgb(189, 215, 238) : Color.FromArgb(221, 235, 247);
-            }
-            dgvAlunos.RowHeadersDefaultCellStyle.ForeColor = Color.FromArgb(48, 84, 150);
             dgvAlunos.AutoResizeColumns();
         }
 
@@ -81,6 +72,12 @@ namespace projetoAcademia
                 tabela.excluir(Registro);
                 bs.RemoveCurrent();
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FormPesquisa formpesquisa = new FormPesquisa();
+            formpesquisa.ShowDialog();
         }
     }
 }

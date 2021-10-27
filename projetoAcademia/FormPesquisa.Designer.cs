@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisa));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.rbInicio = new System.Windows.Forms.RadioButton();
@@ -35,7 +36,10 @@
             this.rbFim = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.btnAbrirRegistro = new System.Windows.Forms.Button();
+            this.bsSearch = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -50,6 +54,8 @@
             // rbInicio
             // 
             this.rbInicio.AutoSize = true;
+            this.rbInicio.Checked = true;
+            this.rbInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbInicio.Location = new System.Drawing.Point(12, 42);
             this.rbInicio.Name = "rbInicio";
             this.rbInicio.Size = new System.Drawing.Size(50, 17);
@@ -61,22 +67,22 @@
             // rbMeio
             // 
             this.rbMeio.AutoSize = true;
+            this.rbMeio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbMeio.Location = new System.Drawing.Point(12, 65);
             this.rbMeio.Name = "rbMeio";
             this.rbMeio.Size = new System.Drawing.Size(48, 17);
             this.rbMeio.TabIndex = 1;
-            this.rbMeio.TabStop = true;
             this.rbMeio.Text = "Meio";
             this.rbMeio.UseVisualStyleBackColor = true;
             // 
             // rbFim
             // 
             this.rbFim.AutoSize = true;
+            this.rbFim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbFim.Location = new System.Drawing.Point(12, 88);
             this.rbFim.Name = "rbFim";
             this.rbFim.Size = new System.Drawing.Size(41, 17);
             this.rbFim.TabIndex = 1;
-            this.rbFim.TabStop = true;
             this.rbFim.Text = "Fim";
             this.rbFim.UseVisualStyleBackColor = true;
             // 
@@ -105,14 +111,27 @@
             this.dgvLista.Location = new System.Drawing.Point(12, 220);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
-            this.dgvLista.Size = new System.Drawing.Size(460, 229);
+            this.dgvLista.Size = new System.Drawing.Size(460, 188);
             this.dgvLista.TabIndex = 3;
+            // 
+            // btnAbrirRegistro
+            // 
+            this.btnAbrirRegistro.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirRegistro.Location = new System.Drawing.Point(12, 414);
+            this.btnAbrirRegistro.Name = "btnAbrirRegistro";
+            this.btnAbrirRegistro.Size = new System.Drawing.Size(460, 35);
+            this.btnAbrirRegistro.TabIndex = 4;
+            this.btnAbrirRegistro.Text = "Abrir registro selecionado";
+            this.btnAbrirRegistro.UseMnemonic = false;
+            this.btnAbrirRegistro.UseVisualStyleBackColor = true;
+            this.btnAbrirRegistro.Click += new System.EventHandler(this.btnAbrirRegistro_Click);
             // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.btnAbrirRegistro);
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.rbFim);
@@ -129,6 +148,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário de pesquisa";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +162,8 @@
         private System.Windows.Forms.RadioButton rbFim;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.Button btnAbrirRegistro;
+        private System.Windows.Forms.BindingSource bsSearch;
 
     }
 }

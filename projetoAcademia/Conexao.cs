@@ -15,7 +15,7 @@ namespace projetoAcademia
         public SQLiteConnection Open()
         {
             string caminho = Environment.CurrentDirectory + "\\academia.sqlite";
-            string sql = string.Format("Data Source = {0}; version=3;", caminho);
+            string sql = string.Format("Data Source = {0}", caminho);
             Con = new SQLiteConnection(sql);
             Con.Open();
             return Con;
