@@ -42,26 +42,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdadeAluno = new System.Windows.Forms.TextBox();
             this.txtAlturaAluno = new System.Windows.Forms.TextBox();
+            this.ep = new System.Windows.Forms.ErrorProvider(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ep = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGravar
             // 
+            this.btnGravar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGravar.Image = ((System.Drawing.Image)(resources.GetObject("btnGravar.Image")));
-            this.btnGravar.Location = new System.Drawing.Point(217, 3);
+            this.btnGravar.Location = new System.Drawing.Point(258, 385);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(214, 64);
             this.btnGravar.TabIndex = 6;
@@ -72,8 +71,9 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(3, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 385);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(208, 64);
             this.btnCancelar.TabIndex = 7;
@@ -85,8 +85,10 @@
             // txtNumeroMatricula
             // 
             this.txtNumeroMatricula.Location = new System.Drawing.Point(129, 19);
+            this.txtNumeroMatricula.MaxLength = 10;
+            this.txtNumeroMatricula.MinimumSize = new System.Drawing.Size(64, 20);
             this.txtNumeroMatricula.Name = "txtNumeroMatricula";
-            this.txtNumeroMatricula.Size = new System.Drawing.Size(39, 20);
+            this.txtNumeroMatricula.Size = new System.Drawing.Size(64, 20);
             this.txtNumeroMatricula.TabIndex = 1;
             // 
             // label5
@@ -128,15 +130,19 @@
             // txtPesoAluno
             // 
             this.txtPesoAluno.Location = new System.Drawing.Point(129, 19);
+            this.txtPesoAluno.MaxLength = 10;
+            this.txtPesoAluno.MinimumSize = new System.Drawing.Size(64, 20);
             this.txtPesoAluno.Name = "txtPesoAluno";
-            this.txtPesoAluno.Size = new System.Drawing.Size(39, 20);
+            this.txtPesoAluno.Size = new System.Drawing.Size(64, 20);
             this.txtPesoAluno.TabIndex = 3;
             // 
             // txtNomeAluno
             // 
             this.txtNomeAluno.Location = new System.Drawing.Point(129, 19);
+            this.txtNomeAluno.MaximumSize = new System.Drawing.Size(200, 20);
+            this.txtNomeAluno.MaxLength = 45;
             this.txtNomeAluno.Name = "txtNomeAluno";
-            this.txtNomeAluno.Size = new System.Drawing.Size(296, 20);
+            this.txtNomeAluno.Size = new System.Drawing.Size(200, 20);
             this.txtNomeAluno.TabIndex = 2;
             // 
             // label4
@@ -151,16 +157,24 @@
             // txtIdadeAluno
             // 
             this.txtIdadeAluno.Location = new System.Drawing.Point(129, 19);
+            this.txtIdadeAluno.MaxLength = 10;
+            this.txtIdadeAluno.MinimumSize = new System.Drawing.Size(64, 20);
             this.txtIdadeAluno.Name = "txtIdadeAluno";
-            this.txtIdadeAluno.Size = new System.Drawing.Size(39, 20);
+            this.txtIdadeAluno.Size = new System.Drawing.Size(64, 20);
             this.txtIdadeAluno.TabIndex = 4;
             // 
             // txtAlturaAluno
             // 
             this.txtAlturaAluno.Location = new System.Drawing.Point(129, 19);
+            this.txtAlturaAluno.MaximumSize = new System.Drawing.Size(200, 20);
+            this.txtAlturaAluno.MaxLength = 45;
             this.txtAlturaAluno.Name = "txtAlturaAluno";
-            this.txtAlturaAluno.Size = new System.Drawing.Size(296, 20);
+            this.txtAlturaAluno.Size = new System.Drawing.Size(200, 20);
             this.txtAlturaAluno.TabIndex = 5;
+            // 
+            // ep
+            // 
+            this.ep.ContainerControl = this;
             // 
             // flowLayoutPanel1
             // 
@@ -171,7 +185,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 16, 0, 16);
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(437, 51);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(484, 64);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -179,10 +193,10 @@
             this.flowLayoutPanel2.Controls.Add(this.label2);
             this.flowLayoutPanel2.Controls.Add(this.txtNomeAluno);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 51);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 64);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 16, 0, 16);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(437, 58);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(484, 71);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // flowLayoutPanel3
@@ -190,10 +204,10 @@
             this.flowLayoutPanel3.Controls.Add(this.label3);
             this.flowLayoutPanel3.Controls.Add(this.txtPesoAluno);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 109);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 135);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 16, 0, 16);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(437, 52);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(484, 65);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
             // flowLayoutPanel4
@@ -201,11 +215,11 @@
             this.flowLayoutPanel4.Controls.Add(this.label4);
             this.flowLayoutPanel4.Controls.Add(this.txtIdadeAluno);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 161);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 200);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 16, 3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 16, 0, 16);
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(437, 52);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(484, 65);
             this.flowLayoutPanel4.TabIndex = 2;
             // 
             // flowLayoutPanel5
@@ -213,44 +227,35 @@
             this.flowLayoutPanel5.Controls.Add(this.label5);
             this.flowLayoutPanel5.Controls.Add(this.txtAlturaAluno);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 213);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 265);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 16, 3, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Padding = new System.Windows.Forms.Padding(0, 16, 0, 16);
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(437, 57);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(484, 72);
             this.flowLayoutPanel5.TabIndex = 2;
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.AutoSize = true;
-            this.flowLayoutPanel6.Controls.Add(this.btnCancelar);
-            this.flowLayoutPanel6.Controls.Add(this.btnGravar);
-            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 293);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(437, 70);
-            this.flowLayoutPanel6.TabIndex = 8;
-            // 
-            // ep
-            // 
-            this.ep.ContainerControl = this;
             // 
             // FormCadastroAluno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 363);
-            this.Controls.Add(this.flowLayoutPanel6);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.flowLayoutPanel5);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 500);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "FormCadastroAluno";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fixa de matricula";
             this.Load += new System.EventHandler(this.FormCadastroAluno_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -261,10 +266,7 @@
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -282,12 +284,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdadeAluno;
         private System.Windows.Forms.TextBox txtAlturaAluno;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.ErrorProvider ep;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
