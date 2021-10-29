@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisa));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.rbInicio = new System.Windows.Forms.RadioButton();
@@ -37,9 +36,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.btnAbrirRegistro = new System.Windows.Forms.Button();
-            this.bsSearch = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -94,7 +91,7 @@
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.Location = new System.Drawing.Point(12, 111);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(460, 103);
+            this.btnPesquisar.Size = new System.Drawing.Size(460, 90);
             this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -108,10 +105,10 @@
             this.dgvLista.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLista.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvLista.Location = new System.Drawing.Point(12, 220);
+            this.dgvLista.Location = new System.Drawing.Point(12, 207);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
-            this.dgvLista.Size = new System.Drawing.Size(460, 188);
+            this.dgvLista.Size = new System.Drawing.Size(460, 201);
             this.dgvLista.TabIndex = 3;
             // 
             // btnAbrirRegistro
@@ -148,7 +145,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário de pesquisa";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +159,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.Button btnAbrirRegistro;
-        private System.Windows.Forms.BindingSource bsSearch;
 
     }
 }

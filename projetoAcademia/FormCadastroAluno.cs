@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace projetoAcademia
 {
@@ -15,6 +16,21 @@ namespace projetoAcademia
         internal Aluno Registro { get; set; }
         public FormCadastroAluno()
         {
+            if (Registro != null)
+            {
+                txtNumeroMatricula.Text = Registro.Codigo.ToString();
+                txtNomeAluno.Text = Registro.Nome;
+                txtPesoAluno.Text = Registro.Peso.ToString();
+                txtIdadeAluno.Text = Registro.Idade.ToString();
+                txtAlturaAluno.Text = Registro.Altura.ToString();
+
+                string caminho = Environment.CurrentDirectory + "\\fotos\\" + Registro.Codigo.ToString() + ".jpeg";
+                opF.ShowDialog();
+                if (File.Exists(caminho))
+                {
+                    pbFoto.Image = Image.FromFile(caminho);
+                }
+            }
             InitializeComponent();
         }
 
@@ -82,6 +98,23 @@ namespace projetoAcademia
                 txtPesoAluno.Text = Registro.Peso.ToString();
                 txtAlturaAluno.Text = Registro.Altura.ToString();
                 txtNumeroMatricula.Enabled = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Registro != null)
+            {
+                string caminho = Environment.CurrentDirectory + "\\fotos\\" + Registro.Codigo.ToString() + ".jpeg";
+                opF.ShowDialog();
+                if (File.Exists(caminho))
+                {
+                    pbFoto.Image = null;
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    File.Copy(opF.FileName, caminho);
+                    pbFoto.Image = Image.FromFile(caminho);
+                }
             }
         }
     }

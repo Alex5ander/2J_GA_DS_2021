@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace projetoAcademia
 {
@@ -74,10 +75,26 @@ namespace projetoAcademia
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
             FormPesquisa formpesquisa = new FormPesquisa();
             formpesquisa.ShowDialog();
+            if (formpesquisa.Registro != null)
+            {
+                Aluno reg = BoaForma.Alunos.First(i => i.Codigo == formpesquisa.Registro.Codigo);
+                bs.Position = bs.IndexOf(reg);
+                Editar_Click(sender, e);
+            }
+        }
+
+        private void bs_PositionChanged(object sender, EventArgs e)
+        {
+            Aluno Registro = (Aluno)bs.Current;
+            string caminho = Environment.CurrentDirectory + "\\fotos\\" + Registro.Codigo.ToString() + ".jpeg";
+            if (File.Exists(caminho))
+            {
+                pbFoto.Image = Image.FromFile(caminho);
+            }
         }
     }
 }

@@ -37,15 +37,16 @@ namespace projetoAcademia
             {
                 tipo = "F";
             }
-            bsSearch.DataSource = tabela.procurar(txtNome.Text, tipo);
-            dgvLista.DataSource = bsSearch;
+            dgvLista.DataSource = tabela.procurar(txtNome.Text, tipo);
+            dgvLista.AutoResizeColumns();
         }
 
         private void btnAbrirRegistro_Click(object sender, EventArgs e)
         {
-            Registro = (Aluno)bsSearch.Current;
-
-            MessageBox.Show(Registro.Nome.ToString());
+            if (Registro != null)
+            {
+                txtNome.Text = Registro.Nome;
+            }
         }
     }
 }
